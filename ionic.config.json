@@ -1,0 +1,7 @@
+{
+  "name": "aidAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
