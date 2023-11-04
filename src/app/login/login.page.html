@@ -1,0 +1,108 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="barra-naranja">
+    <ion-title slot="start">Login</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content>
+
+
+  
+  
+
+    <ion-card class="login-section ion-padding">
+      
+
+      
+      <ion-card-content class="heading ion-padding">
+        <h1>AidAPP</h1>
+        <form [formGroup] ="formularioLogin" class="login-form ion-padding">
+
+          
+          <ion-item>
+            <ion-icon name="mail-outline"></ion-icon>
+            <ion-label position="floating" >Correo Electrónico</ion-label>
+            <ion-input formControlName="email" name="email" type="email"></ion-input>
+            
+            
+          </ion-item>
+          
+          <ion-item>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+
+            
+           
+            
+          </ion-item>
+        </form>
+        
+        <div class="action-buttons ion-padding">
+          <ion-button (click)="ingresar()" size="large" class="login-button" >Ingresar</ion-button>
+          
+        
+
+          <p id="open-modal">Olvidó su contraseña ?</p>
+         
+
+            
+
+          
+        
+        
+          <ion-button [routerLink]="['/crear-cuenta']" size="large" class="signup-button" fill="outline" >Crear Cuenta</ion-button>
+
+        </div>
+        
+        
+
+
+
+      </ion-card-content>
+
+      <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+        <ng-template>
+        <div class="block">Ingresa tu correo para restablecer tu contraseña</div>
+        
+        <form [formGroup] ="formularioLogin" class="login-form ion-padding">
+
+          <ion-item>
+            <ion-icon name="mail-outline"></ion-icon>
+            <ion-label position="floating" >Correo Electrónico</ion-label>
+            <ion-input formControlName="email" name="email" type="email"></ion-input>
+
+           
+            
+            
+          </ion-item>
+
+
+        </form>
+
+        <div class="action-button ion-padding">
+          <ion-button (click)="restablecer()" class="login-button-modal" >Ingresar</ion-button>
+
+        </div>
+        
+       
+
+
+        </ng-template>
+        </ion-modal>
+
+    </ion-card>
+
+    
+    
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="barra-naranja">
+    <p class="ion-text-center">REMODELANDO</p>
+  </ion-toolbar>
+</ion-footer>

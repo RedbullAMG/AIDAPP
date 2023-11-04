@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="barra-naranja">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card #cardElements class="login-section ion-padding">
+    <div class="action-buttons ion-padding">
+      <ion-button class="crear-person" (click)="play()">Cuenta de usuario</ion-button>
+    
+      <ion-button [routerLink]="['/registro']" class="crear-trab" (click)="play()">Cuenta de Maestro</ion-button>
+      <p (click)="stop()"></p>
+    </div>
+    
+
+
+  </ion-card>
+
+  
+</ion-content>
+
+
+
+
